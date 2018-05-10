@@ -1,0 +1,85 @@
+
+# I. Introduction
+We have studied the different neural network. namely convolutional Neutral Network and Recurrent Neural Network. We have performed the text classification with these neural networks.
+
+# II. Objectives.
+In this assignment, we have assigned to do this task
+1. Implement the Text classification with RNN model with new data set which is not used in class
+the new dataset text file is a short story by name of regret and it is uploaded here also in the folder the file name is 
+
+The file that has the python code is Filename:[task1_lab3.py](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task1_lab3.py) the file is there in the GitHub folder. 
+
+2. Implement the Text classification with LSTM model with new data set which is not used in class
+
+The file that has the python code is Filename:[task2_lab3.py](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task2_lab3.py) the file is there in the GitHub folder. 
+
+3. Compare results of CNN, RNN, and LSTM for text classification (same data set for 3 models for comparison) and describe, which model is best for text classification based on your results
+
+The file that has the python code is Filename:[task3_lab3_train.py](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_train.py)
+[task3_lab3_eval.py](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_eval.py) the file is there in the GitHub folder. I have used the ICE4 for the measuring the accuracy and loss of the CNN network.
+
+
+# III. Approaches/Methods
+I use the method that was described in the ICE 4 and ICE5. That is, I used a text file to train the model on that and then evaluate the mode and get its accuracy to compare all results. In RNN I measure the accuracy by giving two different text file each of which has different words for different fields. In the evaluation, I give the python two different sentences and then print out whether the computer can recognize the words from the field or not. Whereas in the RNN model I program the python in such a way that it creates a short story based on the two words that I give to the program. 
+
+# IV. Workflow
+The workflow is in a way that I have used two different approaches for comparing the result of RNN and CNN network. I will define both networks in term of accuracy by applying both the network on the same dataset by name of the regret.txt file.
+
+# V. Datasets
+The new dataset is text file by name of regret.txt, which is a short story by copied from the internet. which is also attached in the folder. 
+
+# VI. Parameters
+
+Parameters for task1 are 
+```
+# Parameters
+learning_rate = 0.001
+training_iters = 10000
+display_step = 1000
+n_input = 10
+
+# number of units in RNN cell
+n_hidden = 100
+```
+
+Parameters for task2 are 
+```
+# Parameters
+learning_rate = 0.001
+training_iters = 10000
+display_step = 1000
+n_input = 2
+
+# number of units in RNN cell
+n_hidden = 10
+```
+There are no parameters for the CNN network as we are giving the program two different set of data so that it can measure the accuracy itself. 
+
+
+# VII. Evaluation & Discussion
+Let first post the results for RNN network done in task1_lab3.py file 
+
+![Task 1 result](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task1_lab3_result.PNG)
+![Task 1 Graph](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task1_lab3_graph.PNG)
+![Task 1 scalar](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task1_lab3_scalar.PNG)
+
+Now the results for LSTM model as done in task2_lab3.py file 
+
+![Task 2 result](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task2_lab3_result.PNG)
+![Task 2 Graph](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task2_lab3_graph.PNG)
+![Task 2 scalar](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task2_lab3_scalar.PNG)
+
+now results for the CNN network as done in the task3_lab3.py file
+
+![Task 3 result](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task2_lab3_result.PNG)
+![Task 3 Graph](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_graph.PNG)
+![Task 3 scalar](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_scalar.PNG)
+![Task 3 histograms](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_histrograms.PNG)
+![Task 3 distributions](https://github.com/liaquat85/Deep_Learning_Course_Assignment/blob/master/lab%203/task3_lab3_distributions.PNG)
+
+
+# VIII. Conclusion
+
+They are two distinct styles of neural nets that perform well on different types of data. RNNs are good with sequence of data that is continuous and are used a lot in problems that can be outlined as what is going to happen in future if something is given whereas CNNs are especially better at complications like image classification.
+
+In the assignment, I tried to compare the results for same data set that is regret.txt, which is just a short story about a person, who regret something in his life.  Both neural network has advantages and disadvantages when compared to one another. For some application like predicting the future word given some other word RNN network work better than CNN, whereas when to classify an image from different sort of image CNN network fine. I tried to compare their accuracy and loss as given the pictures above, one can see that given constraints the RNN neural works better as we have use the application of finding the next words from given words. 
